@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="theme-color" content="#d64e2a" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+      <title>Herra Kit Redes</title> 
+      <link rel="stylesheet" href="https://startbootstrap.com/assets/style-default.css"> 
+
+
+      <!-- Remember to include jQuery :) -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+      <!-- jQuery Modal -->
+      <script type="text/javascript">
+
+        !function(o){"object"==typeof module&&"object"==typeof module.exports?o(require("jquery"),window,document):o(jQuery,window,document)}(function(o,t,i,e){var s=[],l=function(){return s.length?s[s.length-1]:null},n=function(){var o,t=!1;for(o=s.length-1;o>=0;o--)s[o].$blocker&&(s[o].$blocker.toggleClass("current",!t).toggleClass("behind",t),t=!0)};o.modal=function(t,i){var e,n;if(this.$body=o("body"),this.options=o.extend({},o.modal.defaults,i),this.options.doFade=!isNaN(parseInt(this.options.fadeDuration,10)),this.$blocker=null,this.options.closeExisting)for(;o.modal.isActive();)o.modal.close();if(s.push(this),t.is("a"))if(n=t.attr("href"),this.anchor=t,/^#/.test(n)){if(this.$elm=o(n),1!==this.$elm.length)return null;this.$body.append(this.$elm),this.open()}else this.$elm=o("<div>"),this.$body.append(this.$elm),e=function(o,t){t.elm.remove()},this.showSpinner(),t.trigger(o.modal.AJAX_SEND),o.get(n).done(function(i){if(o.modal.isActive()){t.trigger(o.modal.AJAX_SUCCESS);var s=l();s.$elm.empty().append(i).on(o.modal.CLOSE,e),s.hideSpinner(),s.open(),t.trigger(o.modal.AJAX_COMPLETE)}}).fail(function(){t.trigger(o.modal.AJAX_FAIL);var i=l();i.hideSpinner(),s.pop(),t.trigger(o.modal.AJAX_COMPLETE)});else this.$elm=t,this.anchor=t,this.$body.append(this.$elm),this.open()},o.modal.prototype={constructor:o.modal,open:function(){var t=this;this.block(),this.anchor.blur(),this.options.doFade?setTimeout(function(){t.show()},this.options.fadeDuration*this.options.fadeDelay):this.show(),o(i).off("keydown.modal").on("keydown.modal",function(o){var t=l();27===o.which&&t.options.escapeClose&&t.close()}),this.options.clickClose&&this.$blocker.click(function(t){t.target===this&&o.modal.close()})},close:function(){s.pop(),this.unblock(),this.hide(),o.modal.isActive()||o(i).off("keydown.modal")},block:function(){this.$elm.trigger(o.modal.BEFORE_BLOCK,[this._ctx()]),this.$body.css("overflow","hidden"),this.$blocker=o('<div class="'+this.options.blockerClass+' blocker current" onClick="pausarVideo()"></div>').appendTo(this.$body),n(),this.options.doFade&&this.$blocker.css("opacity",0).animate({opacity:1},this.options.fadeDuration),this.$elm.trigger(o.modal.BLOCK,[this._ctx()])},unblock:function(t){!t&&this.options.doFade?this.$blocker.fadeOut(this.options.fadeDuration,this.unblock.bind(this,!0)):(this.$blocker.children().appendTo(this.$body),this.$blocker.remove(),this.$blocker=null,n(),o.modal.isActive()||this.$body.css("overflow",""))},show:function(){this.$elm.trigger(o.modal.BEFORE_OPEN,[this._ctx()]),this.options.showClose&&(this.closeButton=o('<a href="#close-modal" rel="modal:close" class="close-modal '+this.options.closeClass+'">'+this.options.closeText+"</a>"),this.$elm.append(this.closeButton)),this.$elm.addClass(this.options.modalClass).appendTo(this.$blocker),this.options.doFade?this.$elm.css({opacity:0,display:"inline-block"}).animate({opacity:1},this.options.fadeDuration):this.$elm.css("display","inline-block"),this.$elm.trigger(o.modal.OPEN,[this._ctx()])},hide:function(){this.$elm.trigger(o.modal.BEFORE_CLOSE,[this._ctx()]),this.closeButton&&this.closeButton.remove();var t=this;this.options.doFade?this.$elm.fadeOut(this.options.fadeDuration,function(){t.$elm.trigger(o.modal.AFTER_CLOSE,[t._ctx()])}):this.$elm.hide(0,function(){t.$elm.trigger(o.modal.AFTER_CLOSE,[t._ctx()])}),this.$elm.trigger(o.modal.CLOSE,[this._ctx()])},showSpinner:function(){this.options.showSpinner&&(this.spinner=this.spinner||o('<div class="'+this.options.modalClass+'-spinner"></div>').append(this.options.spinnerHtml),this.$body.append(this.spinner),this.spinner.show())},hideSpinner:function(){this.spinner&&this.spinner.remove()},_ctx:function(){return{elm:this.$elm,$elm:this.$elm,$blocker:this.$blocker,options:this.options}}},o.modal.close=function(t){if(o.modal.isActive()){t&&t.preventDefault();var i=l();return i.close(),i.$elm}},o.modal.isActive=function(){return s.length>0},o.modal.getCurrent=l,o.modal.defaults={closeExisting:!0,escapeClose:!0,clickClose:!0,closeText:"Close",closeClass:"",modalClass:"modal",blockerClass:"jquery-modal",spinnerHtml:'<div class="rect1"></div><div class="rect2"></div><div class="rect3"></div><div class="rect4"></div>',showSpinner:!0,showClose:!0,fadeDuration:null,fadeDelay:1},o.modal.BEFORE_BLOCK="modal:before-block",o.modal.BLOCK="modal:block",o.modal.BEFORE_OPEN="modal:before-open",o.modal.OPEN="modal:open",o.modal.BEFORE_CLOSE="modal:before-close",o.modal.CLOSE="modal:close",o.modal.AFTER_CLOSE="modal:after-close",o.modal.AJAX_SEND="modal:ajax:send",o.modal.AJAX_SUCCESS="modal:ajax:success",o.modal.AJAX_FAIL="modal:ajax:fail",o.modal.AJAX_COMPLETE="modal:ajax:complete",o.fn.modal=function(t){return 1===this.length&&new o.modal(this,t),this},o(i).on("click.modal",'a[rel~="modal:close"]',o.modal.close),o(i).on("click.modal",'a[rel~="modal:open"]',function(t){t.preventDefault(),o(this).modal()})});
+
+      </script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+
+
+      <style> 
+         body{
+           background-color: #9e9e9e !important;
+           font-family: Arial, Helvetica, Sans-Serif !important;
+         }  
+          a{
+            font-size: 17px;
+            color: #d64e2a;
+          }
+          h2{
+            text-align: left;
+            color: #d64e2a;
+            font-size: 17px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+          .d-flex {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: center;
+          }
+
+          .d-flex > div {
+            margin: 5px;
+          }
+
+          .hero {
+            flex: 0 0 calc(33.33% - 10px);
+            padding: 30px 0; 
+            border-radius: 3px;
+          }
+          .video{
+            width: 361px;
+            height: 455px;  
+          }
+          .hero img{
+            width: 100%;
+          }
+          .hero .download{
+            width: 16%;
+            padding: 10px; 
+          }
+          .hero p{
+             text-align: left;
+             padding-top: 5px;
+             font-size: 1.4em; 
+             color: #000;
+             line-height: 150%;
+          }
+          .out{
+
+          }
+          .hero .hashtags{
+            color: #4169e1;
+          }
+
+          .video_img{
+            display: none;
+          }
+
+          .share_btn{
+            display: none;
+          }
+
+
+          .modal {
+          height: auto!important;
+          width: 560px!important;
+          border-radius: 0!important;
+          margin: 0;
+          padding: 0;
+        }
+
+        .modal video{
+          width: 100%!important;
+          height: auto;
+        }
+        .modal #videoUrl iframe{
+          width: 100%!important;
+        }
+        .modal a.close-modal {
+          position: absolute;
+          top: -5.5px;
+          right: -5.5px;
+          display: block;
+          width: 35px;
+          height: 34px;
+        }
+
+
+ 
+
+          @media (max-width: 736px) {
+
+            .modal {
+            height: auto!important;
+            width: 100%!important;
+          }
+
+
+
+
+
+            .hero { flex-basis: calc(50% - 10px);  
+          }
+
+          a {
+
+          }
+
+          * {
+            box-sizing: border-box;
+          }
+
+          .video{
+            display: none;
+            width: 100%;
+            height: 32%; 
+          }
+           .video_img{
+            display: block;
+          }
+
+          .hero .download{
+            width: 50px;
+            padding: 10px; 
+            color: #d64e2a; 
+          }
+          .hero p{ 
+             font-size: 1em;  
+          }
+
+          .share_btn{
+            display: inline;
+          } 
+
+           .hero a img{
+           /* width: 27%;*/
+          }
+
+           .links_a{
+            display: inline-flex;
+          }
+
+           #compact_nav_title div .nav-item ::after {
+            content: "Kit Redes";
+          }
+
+          h2{  
+            padding-top: 14px;
+            padding-bottom: 10px;
+          }
+
+
+
+
+
+        }
+
+      </style> 
+ 
+
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84158701-4"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date()); 
+        gtag('config', 'UA-84158701-4');
+      </script> 
+</head>
+
+<body>
+<br> <br> 
+
+       <div class="item-preview"><a href="/Portaldenegocio" style="color:#d64e2a;">
+        <img alt="Back" class="icon_action_back back_button_img" src="https://eventosyanbal.com/_portaldeNegocio/Biblioteca/img-biblioteca/svg_back.svg" style="margin-left:20px;margin-top:-5px;" width="25" />
+        <span style="margin-left:14px;font-size:1.65rem;"><strong>Volver a Inicio</strong></span></a>
+      </div> 
+
+ 
+<div class="container">
+      <div class="d-flex"> 
+          <div class="hero"> 
+            <img src="https://eventosyanbal.com/2020/kit_redes/C5/Extraxl.png">
+            
+            <div class="links_a">
+              <a target="_blank" href="/Corporate/Resources/image.ashx?Id=7498C887-4E69-4BFB-A7FE-5E299F546331&Changed=AAAABt1dZTA=" 
+              download="Extraxl_50%" >
+
+              <img class="download" src="http://eventosyanbal.com/2020/kit_redes/C5/svg_download1.png">Descargar</a>
+              
+              <a class="share_btn" style="color: #d64e2a;" type="button" name="button" onclick="compartir('http://eventosyanbal.com/_portaldeNegocio/Pinicio/brotativo/BP.brotativo/Extraxl.png', '¡Máxima duración a prueba de agua! 50% Dto','¡Máxima duración a prueba de agua! 50% Dto', 'https://www.yanbal.com/co/corporate/p/20011612/mascara-uniquecil-xl-alargamiento-extremo' )">
+
+                  <img class="download"  src="http://eventosyanbal.com/2020/kit_redes/C5/share1.png">Compartir</a> 
+            </div>  
+
+
+            <h2>Descarga esta imagén, copia y pega el siguiente texto en tus redes sociales:</h2>
+            <p class="out">Alargar tus pestañas solo requiere unos minutos. ¡Pruébala y no querrás dejarla! Es perfecta para acompañarte todo el día.</p>
+            <p class="hashtags">#lashes #cejas #belleza #makeup #maquillaje #pestanas #eyelashes #regalo</p>
+          </div>
+
+
+
+
+
+
+
+          <div class="hero">
+
+            <iframe class="video" src="https://www.youtube.com/embed/bOFXCusVc9o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+            <a href="#ex1" rel="modal:open" onclick="abrirModal('https://www.youtube.com/embed/bOFXCusVc9o?autoplay=true')">
+              <img class="video_img" src="https://eventosyanbal.com/2020/kit_redes/C5/kit_redes_toolkit.png"></a>
+
+
+
+           <div class="links_a">
+                <a  target="_blank" href="https://eventosyanbal.com/2020/kit_redes/C5/Es%20el%20momento%20Oh%20La%20la.mp4" download="Oh la lá">
+                  <img class="download" src="http://eventosyanbal.com/2020/kit_redes/C5/svg_download1.png" >Descargar el video</a>
+
+                <a class="share_btn" style="color: #d64e2a;"  onclick="CompartirVideo()" >
+                    <img class="download" src="http://eventosyanbal.com/2020/kit_redes/C5/share1.png">Compartir</a>   
+            </div>  
+
+
+
+            <h2>Descarga este video, copia y pega el siguiente texto en tus redes sociales:</h2>  
+            <p class="out">¿Recuerdas ese primer momento del amor? ¡Es el momento Oh La lá! Enamórate una y otra vez de su aroma frutal y dulce, que mezcla la frambuesa y vainilla. ¡A tan solo $89.000!</p>  
+
+            <p class="hashtags">#ohlala #perfumes #yanbal #fragancias #regalo</p>
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+          <div class="hero">
+            <img src="https://eventosyanbal.com/2020/kit_redes/C5/SuperPapa.png">
+            
+            <div class="links_a">
+              <a target="_blank" href="https://j6.yanbalcolombia.com/Corporate/Resources/image.ashx?Id=F3A227FF-CC17-4D8F-B25C-8F34B8AEA699&Changed=AAAABt1Zhvk=" download="SuperPapa">
+                <img class="download" src="http://eventosyanbal.com/2020/kit_redes/C5/svg_download1.png">Descargar</a>
+              
+              <a class="share_btn" style="color: #d64e2a;" type="button" name="button" onclick="compartir('http://eventosyanbal.com/_portaldeNegocio/Pinicio/brotativo/BP.brotativo/SuperPapa.png', '*El mejor regalo para tu superpapá', '*El mejor regalo para tu superpapá', 'https://www.yanbal.com/co/corporate/p/20012688/super-papa-genio-eau-de-toilette' )">
+                  <img class="download"  src="http://eventosyanbal.com/2020/kit_redes/C5/share1.png">Compartir</a> 
+            </div>      
+
+            <h2>Descarga esta imagén, copia y pega el siguiente texto en tus redes sociales:</h2>  
+            <p class="out">Y tu papá ¿qué superpoder tiene? Regálale la fragancia que más lo identifique. ¡Porque héroes hay montones, pero ninguno como él!</p> 
+             <p class="hashtags">#diadelpadre #superpapa #papa #fragancias #perfume #regalo </p>
+          </div>
+      </div> 
+
+
+
+</div>
+
+
+  <!-- Modal HTML embedded directly into document -->
+      <div id="ex1" class="modal" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <video src="" controls autoplay  id="video1">
+
+        </video>
+        <div style="display: none" id="videoUrl">
+
+        </div>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84158701-4"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'UA-84158701-4');
+        </script>
+
+      </div>
+
+</body>
+ <script>
+
+    /**
+    *Inicia el proceso para compartir el archivo tomando la ruta del servidor y descargandola
+    *convirtiendolo en tipo FILE y dispara la ejecucion del compartir nativo
+    *@param string ruta del archivo a compartir
+    *@param string titulo del archivo a compartir
+    *@param string texto del archivo a compartir
+    *@param string url diferente para anexar archivo a compartir
+    *@return false
+    **/
+
+
+    function compartir( archivo, titulo, texto, link   ){
+
+        var image = new Image();
+        image.crossOrigin = "anonymous";
+        image.src = archivo;
+        // get file name - you might need to modify this if your image url doesn't contain a file extension otherwise you can set the file name manually
+        var fileName = image.src.split(/(\\|\/)/g).pop();
+        var blob ;
+        var ext = fileName.split(".").pop();
+        var tipo;
+        image.onload = function () {
+            var canvas = document.createElement('canvas');
+            canvas.width = this.naturalWidth; // or 'width' if you want a special/scaled size
+            canvas.height = this.naturalHeight; // or 'height' if you want a special/scaled size
+            canvas.getContext('2d').drawImage(this, 0, 0);
+            // ... get as Data URI
+            if (image.src.indexOf(".jpg") > -1) {
+            blob = canvas.toDataURL("image/jpeg");
+            tipo = "image/jpeg";
+            } else if (image.src.indexOf(".png") > -1) {
+              tipo = "image/png";
+            blob = canvas.toDataURL("image/png");
+            } else if (image.src.indexOf(".gif") > -1) {
+              tipo = "image/gif";
+            blob = canvas.toDataURL("image/gif");
+            }else {
+              tipo = "image/png";
+            blob = canvas.toDataURL("image/png");
+            }
+            console.log(blob);
+            var arr = blob.split(','), mime = arr[0].match(/:(.*?);/)[1],
+            bstr = atob(arr[1]), n = bstr.length, u8arr = new Uint8Array(n);
+            while(n--){
+              u8arr[n] = bstr.charCodeAt(n);
+            }
+            var file = new File([u8arr], fileName+"."+ext, {type:mime});
+
+
+             pack = {files: [file] };
+             accionCompartir( pack, titulo, texto, link );
+        };
+    } 
+
+    /**
+    *empaqueta los datos para ejecutar el compartir nativo
+    *@param object datos tipo file con el archivo
+    *@param string titulo del archivo a compartir
+    *@param string texto del archivo a compartir
+    *@param string url diferente para anexar archivo a compartir
+    *@return false
+    **/
+    function accionCompartir( object, titulo, texto, link ){
+      const title = titulo;
+      const text = texto;
+      const url = link;
+      const files = object.files;
+      let data = {};
+      if (files.length > 0) {
+        data.files = files;
+        if (!navigator.canShare || !navigator.canShare(data)) {
+          return false;
+        }
+      }
+      if (title !== '')
+        data.title = title;
+      if (text !== '')
+        data.text = text;
+      if (url !== '')
+        data.url = url;
+
+      if (navigator.canShare && !navigator.canShare(data)) {
+        return false;
+      }
+      navigator.share(data)
+        .then(() => {
+      })
+        .catch((err) => {
+        console.log('Unsuccessful share');
+        console.log(err.message);
+      });
+
+      return false;
+
+    }
+
+    function CompartirVideo(){
+            var arrayVideos = [
+                {
+                  titulo: 'Oh La lá',
+                  descripcion: '¡Es el momento Oh La lá! Enamórate una y otra vez de su aroma frutal y dulce, que mezcla la frambuesa y vainilla. ¡A tan solo $89.000!',
+                  url: 'https://youtu.be/bOFXCusVc9o',
+                  miniatura: 'https://eventosyanbal.com/2020/kit_redes/C5/ohlala_.jpg',
+                  urlShare: 'https://youtu.be/bOFXCusVc9o'
+                }
+              ];
+            var video = arrayVideos[0];
+            Compartir1( video.urlShare, video.titulo, video.descripcion );
+          }
+
+    function eventoCompartir( datos ){
+            var title = datos.titulo;
+            var text = datos.descripcion;
+            var url = datos.url;
+            let data = {};
+
+            if (title !== '')
+              data.title = title;
+            if (text !== '')
+              data.text = text;
+            if (url !== '')
+              data.url = url;
+
+            if (navigator.share && !navigator.share(data)) {
+              return false;
+            }
+            navigator.share(data)
+              .then(() => {
+            })
+              .catch((err) => {
+              console.log('Unsuccessful share');
+              console.log(err.message);
+            });
+
+            return false;
+          }    
+
+
+    function Compartir1( url, titulo, descripcion ){
+            if (!navigator.canShare) {
+              text = titulo + " " + url ;
+              text = text.replace( " ", "%20" );
+              location.href = 'whatsapp://send?text=' + text;
+
+              console.log('compartir generico');
+              //compartir = '<a  class="link_wp_oferta" style="display:none" href="whatsapp://send?text='+text+'"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>';
+            }else{
+              //compartir = '<div class="link_wp_oferta" style="display:none" onClick="eventoCompartir('+i+')"><i class="fa fa-share-alt" aria-hidden="true"></i></div>';
+              var datos = {
+                titulo: titulo,
+                descripcion: descripcion,
+                url: url
+              };
+              eventoCompartir( datos );
+              console.log('compartir nativo');
+            }
+          }      
+
+
+          /* Modal */
+  
+
+        var myVideo = document.getElementById("video1");
+        var rutaVideoActual = "";
+        var tipoVideo = 0;
+        function abrirModal( ruta ){
+          urlVideo = ruta.split('youtube');
+          if( urlVideo.length == 2 ){
+            document.getElementById('video1').style.display="none";
+            document.getElementById('videoUrl').innerHTML= '<iframe width="560" height="315" src="'+ruta+'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            document.getElementById('videoUrl').style.display = "block";
+            tipoVideo = 1;
+          }else{
+            document.getElementById('video1').style.display="block";
+            document.getElementById('videoUrl').style.display = "none";
+            if( rutaVideoActual != ruta ){
+              rutaVideoActual = ruta;
+              document.getElementById("video1").src = ruta;
+            }
+            myVideo.play();
+            tipoVideo = 0;
+          }
+
+        }
+        function pausarVideo(){
+          if( tipoVideo == 0 ){
+              myVideo.pause();
+          }else{
+              document.getElementById('videoUrl').innerHTML= "";
+          }
+
+        } 
+
+  </script>
+
+
+</html>
